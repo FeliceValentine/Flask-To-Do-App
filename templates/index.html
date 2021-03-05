@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>To do List</title>
+{% endblock %}
+
+{% block body %}
+<div class="content wrapper">
+    <h1 style="text-align: center">To do list</h1>
+    {% if tasks|length < 1 %}
+    <h4 style="text-align: center">Add your first item to the list !</h4>
+    {% else %}
+
+    <table>
+        <tr>
+            <th>Items</th>
+            <th>Added</th>
+            <th>Actions</th>
+        </tr>
+        {% for task in tasks %}
+            <tr>
+                <td>{{ task.content }}</td>
+                <td class="date set-width">{{ task.date_created.date() }}</td>
+                <td class="flex-container set-width">
+                    <a class="update" href="/update/{{task.id}}">Update</a>
+                    <a href="/delete/{{task.id}}">🗑️</a>
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% endif %}
+
+    <div class="form">
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Add item">
+        </form>
+    </div>
+
+</div>
+{% endblock %}

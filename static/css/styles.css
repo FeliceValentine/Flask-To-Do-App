@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+/* colors and fonts used */
+:root{
+    --pastel_Orange: #FEDED6;
+    --pastel_Violet: #E8E0EB;
+    --salmon:#F8C9CC;
+    --lavender: #DDC8FF;
+    --orange: #FEB987;
+    --main_font:#232A42;
+    --sec_font:#8E95B2;
+    font-family: 'Lato', sans-serif;
+    color:var(--main_font);
+} 
+body, html {
+    margin: 0;
+    background: -webkit-linear-gradient(to right top,#DDC8FF, #E8E0EB, #eee6ee, #fbfafc, #f9f4f7, #F8C9CC, #F8C9CC, #f9f4f7);
+    background: linear-gradient(to right top,#DDC8FF, #E8E0EB, #eee6ee, #fbfafc, #f9f4f7, #F8C9CC, #F8C9CC, #f9f4f7);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height:100%;
+}
+
+.wrapper, .update_wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    margin-top: 2rem;
+}
+
+input {
+    height: 28px;
+    border: 0.5px solid var(--sec_font);
+    border-radius: 7px;
+    color: var(--main_font);
+    background: var(--pastel_Violet);
+    margin-right:1rem;
+}
+
+ button {
+    height:30px;
+    border: 0.5px solid var(--sec_font);
+    border-radius: 7px;
+    background: var(--pastel_Violet);
+    color: var(--main_font);
+    padding:0.15rem;
+}
+
+button:hover, input:focus {
+    background: var(--lavender);
+    outline: none;
+}
+
+.flex_container {
+    display: flex;
+    gap: 1rem;
+}
+
+.flex_container {
+    font-weight: 700;
+}
+
+.update{
+    padding: 0.5rem;
+    font-weight: 700;
+}
+
+table {
+    background: rgba(242, 245, 246, 0.5);
+    width:70vw;
+    border-radius:25px;
+    font-weight: 400;
+    border: 0.5px solid var(--sec_font);
+}
+
+th {
+    font-size: 1.35rem;
+    height: 25px;
+}
+
+td {
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.5rem;
+    border-top: 1px solid var(--sec_font);
+}
+
+.set-width {
+    width:150px;
+}
+
+.date{
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--dark_acc);
+}
+
+
+@media only screen and (max-width: 500px) {
+    th {
+        font-size:1.15rem;
+    }
+    td {
+        font-size: 1rem;
+    }
+    table {
+        width:95vw;
+    }
+}
